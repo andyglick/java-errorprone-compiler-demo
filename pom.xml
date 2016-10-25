@@ -1,0 +1,283 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+  http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.zrgs.errorprone</groupId>
+  <artifactId>errorprone-demo</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>Java errorprone compiler demo</name>
+  <url>http://maven.apache.org</url>
+
+  <prerequisites>
+    <maven>${maven.version}</maven>
+  </prerequisites>
+
+  <properties>
+    <errorprone.compiler.version>2.0.13</errorprone.compiler.version>
+    <java.version>1.8</java.version>
+    <logback.version>1.1.7</logback.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
+    <maven.version>3.3.9</maven.version>
+    <plexus.compiler.version>2.8.1</plexus.compiler.version>
+    <plexus.utils.version>3.0.24</plexus.utils.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <slf4j.version>1.7.21</slf4j.version>
+    <springframework.version>4.3.3.RELEASE</springframework.version>
+    <surefire.reportFormat>plain</surefire.reportFormat>
+    <surefire.useFile>false</surefire.useFile>
+    <surefire.version>2.19.1</surefire.version>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+
+        <!--
+        [INFO]    com.github.stephenc.jcip:jcip-annotations:jar:1.0-1:compile
+[INFO]    com.google.code.findbugs:jFormatString:jar:3.0.0:compile
+[INFO]    com.google.code.findbugs:jsr305:jar:3.0.0:compile
+[INFO]    com.google.errorprone:error_prone_annotation:jar:2.0.13:compile
+[INFO]    com.google.errorprone:error_prone_annotations:jar:2.0.13:compile
+[INFO]    com.google.errorprone:error_prone_core:jar:2.0.13:compile
+[INFO]    com.google.errorprone:javac:jar:1.9.0-dev-r2973-2:compile
+[INFO]    com.google.guava:guava:jar:19.0:compile
+[INFO]    junit:junit:jar:4.12:test
+[INFO]    org.checkerframework:dataflow:jar:1.8.10:compile
+[INFO]    org.checkerframework:javacutil:jar:1.8.10:compile
+[INFO]    org.codehaus.plexus:plexus-compiler-api:jar:2.8.1:compile
+[INFO]    org.codehaus.plexus:plexus-compiler-javac-errorprone:jar:2.8.1:compile
+[INFO]    org.codehaus.plexus:plexus-compiler-javac:jar:2.8.1:compile
+[INFO]    org.codehaus.plexus:plexus-utils:jar:3.0.22:compile
+[INFO]    org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO]    org.pcollections:pcollections:jar:2.1.2:compile
+[INFO]    org.slf4j:jcl-over-slf4j:jar:1.7.21:compile
+[INFO]    org.slf4j:jul-to-slf4j:jar:1.7.21:compile
+[INFO]    org.slf4j:log4j-over-slf4j:jar:1.7.21:compile
+[INFO]    org.slf4j:slf4j-api:jar:1.7.21:compile
+        -->
+
+        <!--
+        [INFO] Plugin Resolved: maven-compiler-plugin-3.5.1.jar
+[INFO]     Plugin Dependency Resolved: maven-plugin-api-3.0.jar
+[INFO]     Plugin Dependency Resolved: maven-artifact-3.0.jar
+[INFO]     Plugin Dependency Resolved: maven-core-3.0.jar
+[INFO]     Plugin Dependency Resolved: maven-toolchain-2.2.1.jar
+[INFO]     Plugin Dependency Resolved: maven-shared-utils-3.0.0.jar
+[INFO]     Plugin Dependency Resolved: maven-shared-incremental-1.1.jar
+[INFO]     Plugin Dependency Resolved: plexus-compiler-api-2.7.jar
+[INFO]     Plugin Dependency Resolved: plexus-compiler-manager-2.7.jar
+[INFO]     Plugin Dependency Resolved: plexus-compiler-javac-2.7.jar
+        -->
+
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.5.1</version>
+          <configuration>
+            <compilerId>javac-with-errorprone</compilerId>
+            <forceJavacCompilerUse>true</forceJavacCompilerUse>
+          </configuration>
+          <dependencies>
+            <!--  -->
+            <dependency>
+              <groupId>org.codehaus.plexus</groupId>
+              <artifactId>plexus-utils</artifactId>
+              <version>${plexus.utils.version}</version>
+            </dependency>
+
+            <dependency>
+              <groupId>com.google.errorprone</groupId>
+              <artifactId>error_prone_core</artifactId>
+              <version>${errorprone.compiler.version}</version>
+            </dependency>
+
+            <dependency>
+              <groupId>org.codehaus.plexus</groupId>
+              <artifactId>plexus-compiler-javac-errorprone</artifactId>
+              <version>${plexus.compiler.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.codehaus.plexus</groupId>
+              <artifactId>plexus-compiler-api</artifactId>
+              <version>${plexus.compiler.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.codehaus.plexus</groupId>
+              <artifactId>plexus-compiler-manager</artifactId>
+              <version>${plexus.compiler.version}</version>
+            </dependency>
+            <dependency>
+              <groupId>org.codehaus.plexus</groupId>
+              <artifactId>plexus-utils</artifactId>
+              <version>3.0.24</version>
+            </dependency>
+
+          </dependencies>
+        </plugin>
+        <plugin>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>2.10</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-failsafe-plugin</artifactId>
+          <version>${surefire.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-help-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>2.10.4</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.5.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${surefire.version}</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-report-plugin</artifactId>
+          <version>${surefire.version}</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>versions-maven-plugin</artifactId>
+          <version>2.3</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-help-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>verbose-logging</id>
+      <dependencyManagement>
+        <dependencies>
+          <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+          </dependency>
+        </dependencies>
+      </dependencyManagement>
+      <dependencies>
+        <dependency>
+          <groupId>ch.qos.logback</groupId>
+          <artifactId>logback-classic</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-utils</artifactId>
+        <version>${plexus.utils.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.errorprone</groupId>
+        <artifactId>error_prone_core</artifactId>
+        <version>${errorprone.compiler.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-compiler-javac-errorprone</artifactId>
+        <version>${plexus.compiler.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-compiler-api</artifactId>
+        <version>${plexus.compiler.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-compiler-manager</artifactId>
+        <version>${plexus.compiler.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>com.google.errorprone</groupId>
+      <artifactId>error_prone_core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.codehaus.plexus</groupId>
+      <artifactId>plexus-compiler-javac-errorprone</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jcl-over-slf4j</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jul-to-slf4j</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>log4j-over-slf4j</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>${slf4j.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
