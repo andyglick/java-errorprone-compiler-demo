@@ -12,7 +12,7 @@ that others might gain from what I had stumbled upon.
 
 
       <properties>
-        <errorprone.compiler.version>2.0.13</errorprone.compiler.version>
+        <errorprone.compiler.version>2.0.15</errorprone.compiler.version>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -23,7 +23,7 @@ that others might gain from what I had stumbled upon.
     
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.5.1</version>
+          <version>3.6.0</version>
           <configuration>
             <compilerId>javac-with-errorprone</compilerId>
             <forceJavacCompilerUse>true</forceJavacCompilerUse>
