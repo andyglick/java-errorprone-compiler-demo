@@ -28,7 +28,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <slf4j.version>1.7.23</slf4j.version>
-    <springframework.version>4.3.3.RELEASE</springframework.version>
+    <springframework.version>4.3.6.RELEASE</springframework.version>
     <surefire.reportFormat>plain</surefire.reportFormat>
     <surefire.useFile>false</surefire.useFile>
     <surefire.version>2.19.1</surefire.version>
