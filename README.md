@@ -12,11 +12,11 @@ that others might gain from what I had stumbled upon.
 
 
     <properties>
-        <errorprone.compiler.version>2.0.17</errorprone.compiler.version>
+        <errorprone.compiler.version>2.0.19</errorprone.compiler.version>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <maven.version>3.3.9</maven.version>
+        <maven.version>3.5.0</maven.version>
         <plexus.compiler.version>2.8.1</plexus.compiler.version>
         <plexus.utils.version>3.0.24</plexus.utils.version>
     </properties>
