@@ -10,6 +10,24 @@ unwarranted assumption, and given that I had spent much more time than I
 had anticipated, I thought that I would explain what I experienced so
 that others might gain from what I had stumbled upon.
 
+Developers at Google have created the errorprone compiler with the
+intention of producing a compiler which is mpre strict than the vanilla
+javac compiler. There is a source code file, in this project which I
+took from the compiler's site, the name of the class is ShortSet.java.
+All that you have to do to see that javac allows the erroneous code to
+comp[le and that errorprone catches it is to run the project using maven.
+
+    1st invoke maven using javac "mvn clean compile"
+    
+    2nd invoke maven using errorprone "mvn clean compile -P errorprone
+
+
+javac allows the code to compile and errorprone rejects the code,
+produces an error message and causes the build to fail.
+
+That's it -- pretty short and sweet
+
+[The errorprone compiler's site](http://errorprone.info/)
 
     <properties>
         <errorprone.compiler.version>2.0.19</errorprone.compiler.version>
