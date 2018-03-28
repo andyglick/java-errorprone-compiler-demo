@@ -34,18 +34,18 @@ maven-compiler-plugin's configuration.
 [The errorprone compiler's site](http://errorprone.info/)
 
     <properties>
-        <errorprone.compiler.version>2.0.19</errorprone.compiler.version>
+        <errorprone.compiler.version>2.2.0</errorprone.compiler.version>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <maven.version>3.5.0</maven.version>
-        <plexus.compiler.version>2.8.1</plexus.compiler.version>
-        <plexus.utils.version>3.0.24</plexus.utils.version>
+        <maven.version>3.5.3</maven.version>
+        <plexus.compiler.version>2.8.3</plexus.compiler.version>
+        <plexus.utils.version>31.0</plexus.utils.version>
     </properties>
 
     <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.6.1</version>
+        <version>3.7.0</version>
         <configuration>
             <compilerId>javac-with-errorprone</compilerId>
             <forceJavacCompilerUse>true</forceJavacCompilerUse>
