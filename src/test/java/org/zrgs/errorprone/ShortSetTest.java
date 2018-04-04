@@ -32,12 +32,11 @@ public class ShortSetTest
   {
 
     Set<Short> s = new HashSet<>();
-    final short ONE = 1;
 
     for (short i = 0; i < 100; i++)
     {
       s.add(i);
-      s.remove((short) (i - ONE));
+      s.remove(i - 1);
     }
 
     log.info("the size  of the set is " + s.size());

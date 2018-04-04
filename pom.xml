@@ -37,9 +37,6 @@
   <profiles>
     <profile>
       <id>errorprone</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
       <build>
         <plugins>
           <plugin>

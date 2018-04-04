@@ -17,10 +17,13 @@ took from the compiler's site, the name of the class is ShortSet.java.
 All that you have to do to see that javac allows the erroneous code to
 compile and that errorprone catches it is to run the project using maven.
 
-    1st invoke maven using javac "mvn clean compile"
-    
-    2nd invoke maven using errorprone "mvn clean compile -P errorprone
+    1st invoke maven using javac "mvn clean compile" -- that build will fail 
+    during the test ohase as the code as written compiles, but then produces a
+    RuntimeException
 
+    2nd invoke maven using the errorprone compiler "mvn clean compile -P
+    errorprone" in that build the error prone compiler detects the
+    coding error and fails the build  -- brilliant
 
 javac allows the code to compile and errorprone rejects the code,
 produces an error message and causes the build to fail.
