@@ -97,4 +97,4 @@ to me.
         </dependencies>
     </plugin>
 
-current as of 2018-04-04
+*versions and compiler plugin configuration current as of 2018-04-04*
