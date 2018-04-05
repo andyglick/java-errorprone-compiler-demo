@@ -57,7 +57,7 @@ to me.
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.version>3.5.3</maven.version>
-        <plexus.compiler.version>2.8.3</plexus.compiler.version>
+        <plexus.compiler.version>2.8.4</plexus.compiler.version>
         <plexus.utils.version>31.0</plexus.utils.version>
     </properties>
 
