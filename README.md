@@ -1,5 +1,5 @@
-Java Maven Errorprone Compiler Configuration Demo
-=================================================
+Java Maven Errorprone Compiler Configuration and Example Demo
+=============================================================
 
 Why this project?
 -----------------
