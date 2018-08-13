@@ -28,12 +28,11 @@ public class ShortSetTest
   private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
   @Test
-  public void testShortSet()
-  {
+  public void testShortSet() {
 
     Set<Short> s = new HashSet<>();
 
-    for (short i = 0; i < 100; i++)
+    for (int i = 0; i < 100; i++)
     {
       s.add(i);
       s.remove(i - 1);
