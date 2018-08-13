@@ -32,7 +32,7 @@ public class ShortSetTest
 
     Set<Short> s = new HashSet<>();
 
-    for (int i = 0; i < 100; i++)
+    for (short i = 0; i < 100; i++)
     {
       s.add(i);
       s.remove(i - 1);
