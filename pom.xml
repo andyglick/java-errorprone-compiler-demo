@@ -17,12 +17,12 @@
   </prerequisites>
 
   <properties>
-    <errorprone.compiler.version>2.2.0</errorprone.compiler.version>
+    <errorprone.compiler.version>2.3.1</errorprone.compiler.version>
     <java.version>1.8</java.version>
     <logback.version>1.3.0-alpha4</logback.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <maven.version>3.5.3</maven.version>
+    <maven.version>3.5.4</maven.version>
     <plexus.compiler.version>2.8.4</plexus.compiler.version>
     <plexus.utils.version>3.1.0</plexus.utils.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -31,7 +31,7 @@
     <springframework.version>5.0.2.RELEASE</springframework.version>
     <surefire.reportFormat>plain</surefire.reportFormat>
     <surefire.useFile>false</surefire.useFile>
-    <surefire.version>2.20.1</surefire.version>
+    <surefire.version>2.22.0</surefire.version>
   </properties>
 
   <profiles>
@@ -41,7 +41,7 @@
         <plugins>
           <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.7.0</version>
+            <version>3.8.0</version>
             <configuration>
               <compilerId>javac-with-errorprone</compilerId>
               <forceJavacCompilerUse>true</forceJavacCompilerUse>
@@ -152,7 +152,7 @@
         </plugin>
         <plugin>
           <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.0.1</version>
         </plugin>
         <plugin>
           <artifactId>maven-resources-plugin</artifactId>
@@ -262,7 +262,7 @@
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>3.9.1</version>
+      <version>3.10.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>

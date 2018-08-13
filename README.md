@@ -4,9 +4,11 @@ Java Maven Errorprone Compiler Configuration and Example Demo
 Why this project?
 -----------------
 
-You might think that configuring yet another Java compiler in Maven
+current as of May 19 2018
+
+You might expect that configuring yet another Java compiler in Maven
 would be trivial. I certainly expected it to be, but that turned out to
-be an unwarranted assumption, and given that I had spent much more time
+be an unwarranted assumption, and given that I had spent far more time
 than I had anticipated, I thought that I would explain what I
 experienced so that others might gain from what I had stumbled upon.
 
@@ -25,11 +27,20 @@ compile and that errorprone catches it is to run the project using maven.
     errorprone" -- in that build the error prone compiler detects the
     coding error and fails the build  -- brilliant
 
+Configuration details:
+
+It turns out that the compiler that actually gets used by the
+maven-compiler-plugin is configurable, but how to configure the actual
+compiler that you might use isn't trivially obvious to the casual
+observer. In the case of the error prone compiler, there are a number of
+jars from the error prone project, and as is often the case with maven
+supplied plugins, there are a number of plexus jars that are required.
+The relationship between the maven and the plexus projects is probably a
+rant for a different day -- HEH!
 
 This is the example code:
 
-    package org.zrgs.errorprone;
-
+    package org.zrgs 
     import org.junit.Test;
 
     import org.slf4j.Logger;
@@ -45,13 +56,13 @@ This is the example code:
      * ShortSetTest is a demonstration class to show what kinds of problems the errorprone
      * compiler can identify and report with existing Java code
      *
-     * the code below compiles, but it has been modified from the original example
+     * the code below compiles with javac, but fails compilation when using the error prone compiler
      *
-     * what didn't compile was the statement
+     * what doesn't compile under error prone is the statement
      *
      * s.remove(i - 1);
      *
-     * as it resolved to int and not to short
+     * as it resolves to int and not to short
      */
     public class ShortSetTest
     {
@@ -102,13 +113,13 @@ to me.
 [The errorprone compiler's site](http://errorprone.info/)
 
     <properties>
-        <errorprone.compiler.version>2.2.0</errorprone.compiler.version>
+        <errorprone.compiler.version>2.3.1</errorprone.compiler.version>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.version>3.5.3</maven.version>
         <plexus.compiler.version>2.8.4</plexus.compiler.version>
-        <plexus.utils.version>31.0</plexus.utils.version>
+        <plexus.utils.version>3.1.0</plexus.utils.version>
     </properties>
 
     <plugin>
