@@ -158,4 +158,4 @@ to me.
         </dependencies>
     </plugin>
 
-*versions and compiler plugin configuration current as of 2018-04-04*
+*versions and compiler plugin configuration current as of 2018-08-13*
