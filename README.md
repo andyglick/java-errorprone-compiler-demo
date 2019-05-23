@@ -4,7 +4,7 @@ Java Maven Errorprone Compiler Configuration and Example Demo
 Why this project?
 -----------------
 
-current as of February 2 2019
+current as of May 23 2019
 
 You might expect that configuring yet another Java compiler in Maven
 would be trivial. I certainly expected it to be, but that turned out to
@@ -113,18 +113,18 @@ to me.
 [The errorprone compiler's site](http://errorprone.info/)
 
     <properties>
-        <errorprone.compiler.version>2.3.1</errorprone.compiler.version>
+        <errorprone.compiler.version>2.3.3</errorprone.compiler.version>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
-        <maven.version>3.5.4</maven.version>
-        <plexus.compiler.version>2.8.4</plexus.compiler.version>
+        <maven.version>3.6.1</maven.version>
+        <plexus.compiler.version>2.8.5</plexus.compiler.version>
         <plexus.utils.version>3.1.0</plexus.utils.version>
     </properties>
 
     <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
+        <version>3.8.1</version>
         <configuration>
             <compilerId>javac-with-errorprone</compilerId>
             <forceJavacCompilerUse>true</forceJavacCompilerUse>
@@ -158,4 +158,4 @@ to me.
         </dependencies>
     </plugin>
 
-*versions and compiler plugin configuration current as of 2019-02-02*
+*versions and compiler plugin configuration current as of 2019-05-23*
