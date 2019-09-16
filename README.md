@@ -1,10 +1,12 @@
+[![DepShield Badge](https://depshield.sonatype.org/badges/andyglick/java-errorprone-compiler-demo/depshield.svg)](https://depshield.github.io)
+
 Java Maven Errorprone Compiler Configuration and Example Demo
 =============================================================
 
 Why this project?
 -----------------
 
-current as of May 23 2019
+current as of September 152019
 
 You might expect that configuring yet another Java compiler in Maven
 would be trivial. I certainly expected it to be, but that turned out to
@@ -119,7 +121,7 @@ to me.
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.version>3.6.1</maven.version>
         <plexus.compiler.version>2.8.5</plexus.compiler.version>
-        <plexus.utils.version>3.1.0</plexus.utils.version>
+        <plexus.utils.version>3.2.1</plexus.utils.version>
     </properties>
 
     <plugin>
@@ -158,4 +160,4 @@ to me.
         </dependencies>
     </plugin>
 
-*versions and compiler plugin configuration current as of 2019-05-23*
+*versions and compiler plugin configuration current as of 2019-09-15*
