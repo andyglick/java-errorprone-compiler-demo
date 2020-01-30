@@ -115,13 +115,15 @@ to me.
 [The errorprone compiler's site](http://errorprone.info/)
 
     <properties>
-        <errorprone.compiler.version>2.3.3</errorprone.compiler.version>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-        <maven.version>3.6.1</maven.version>
-        <plexus.compiler.version>2.8.5</plexus.compiler.version>
-        <plexus.utils.version>3.2.1</plexus.utils.version>
+      <errorprone.compiler.version>2.3.4</errorprone.compiler.version>
+      <java.version>1.8</java.version>
+      <maven.compiler.source>${java.version}</maven.compiler.source>
+      <maven.compiler.target>${java.version}</maven.compiler.target>
+      <maven.version>3.6.3</maven.version>
+      <plexus.compiler.version>2.8.5</plexus.compiler.version>
+      <plexus.utils.version>3.3.0</plexus.utils.version>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <plugin>
