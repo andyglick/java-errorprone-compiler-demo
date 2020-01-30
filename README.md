@@ -6,7 +6,7 @@ Java Maven Errorprone Compiler Configuration and Example Demo
 Why this project?
 -----------------
 
-current as of September 16, 2019
+current as of January 30, 2020
 
 You might expect that configuring yet another Java compiler in Maven
 would be trivial. I certainly expected it to be, but that turned out to
@@ -160,4 +160,4 @@ to me.
         </dependencies>
     </plugin>
 
-*versions and compiler plugin configuration current as of 2019-09-16*
+*versions and compiler plugin configuration current as of 2020-01-30*
