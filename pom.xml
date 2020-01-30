@@ -32,7 +32,7 @@
     <plexus.utils.version>3.2.1</plexus.utils.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <slf4j.version>2.0.0-alpha0</slf4j.version>
+    <slf4j.version>2.0.0-alpha1</slf4j.version>
     <springframework.version>5.0.2.RELEASE</springframework.version>
     <surefire.reportFormat>plain</surefire.reportFormat>
     <surefire.useFile>false</surefire.useFile>
