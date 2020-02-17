@@ -28,7 +28,7 @@
     <maven.compiler.verbose>false</maven.compiler.verbose>
     <maven.version>3.6.1</maven.version>
     <openclover.version>4.4.1</openclover.version>
-    <plexus.compiler.version>2.8.5</plexus.compiler.version>
+    <plexus.compiler.version>2.8.6</plexus.compiler.version>
     <plexus.utils.version>3.3.0</plexus.utils.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
