@@ -36,7 +36,7 @@
     <springframework.version>5.0.2.RELEASE</springframework.version>
     <surefire.reportFormat>plain</surefire.reportFormat>
     <surefire.useFile>false</surefire.useFile>
-    <surefire.version>3.0.0-M4</surefire.version>
+    <surefire.version>3.0.0-M5</surefire.version>
   </properties>
 
   <profiles>
