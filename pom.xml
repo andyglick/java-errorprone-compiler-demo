@@ -22,7 +22,7 @@
     <errorprone.compiler.version>2.5.1</errorprone.compiler.version>
     <java.version>1.8</java.version>
     <logback.version>1.3.0-alpha5</logback.version>
-    <manifold.version>2020.1.51</manifold.version>
+    <manifold.version>2021.1.13</manifold.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <maven.compiler.verbose>false</maven.compiler.verbose>
