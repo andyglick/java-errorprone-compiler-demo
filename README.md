@@ -6,7 +6,7 @@ Java Maven Errorprone Compiler Configuration and Example Demo
 Why this project?
 -----------------
 
-current as of January 30, 2020
+current as of January 16, 2022
 
 You might expect that configuring yet another Java compiler in Maven
 would be trivial. I certainly expected it to be, but that turned out to
